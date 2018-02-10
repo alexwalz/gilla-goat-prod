@@ -2,6 +2,10 @@
 node_modules
 npm-debug.log
 
+# DB Config
+Config
+config.json
+
 # Local development
 *.env
 *.dev
