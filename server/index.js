@@ -18,6 +18,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static("public"));
 
 
+
 // Allow CORS requests - customize this to restrict it to certain origins
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
