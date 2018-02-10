@@ -13,6 +13,7 @@
     "react-router-redux": "^4.0.8",
     "react-transition-group": "^2.2.1",
     "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "semantic-ui-css": "^2.2.14"
   },
   "scripts": {
