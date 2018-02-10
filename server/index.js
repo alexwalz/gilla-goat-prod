@@ -54,14 +54,9 @@ if (cluster.isMaster) {
 } else {
   db.sequelize.sync({ force: false }).then(function() {
     console.log("\n\nDatabase Tables are ready 👌")
-    // app.listen(PORT, function() {
-    //   console.log("App listening on PORT " + PORT +" 👂👂\n");
-    //   // console.error(`Node cluster worker ${process.pid}: listening on port ${PORT}`);
-    // });
-
-    app.listen( app.get( 'PORT' ), function() {
-      console.log( 'Node server is running on port ' + app.get( 'PORT' ));
-      });
+    app.listen(PORT, function() {
+      console.log("App listening on PORT " + PORT +" 👂👂\n");
+      // console.error(`Node cluster worker ${process.pid}: listening on port ${PORT}`);
+    });
   });
-
 }
