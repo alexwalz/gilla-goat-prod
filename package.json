@@ -15,7 +15,8 @@
   ],
   "dependencies": {
     "body-parser": "^1.18.2",
-    "express": "^4.14.1",
+    "express": "^4.16.2",
+    "sequelize": "^4.33.2",
     "serve": "^6.4.9"
   },
   "repository": {
