@@ -60,7 +60,7 @@ if (cluster.isMaster) {
     // });
 
     app.listen( app.get( 'PORT' ), function() {
-      console.log( 'Node server is running on port ' + app.get( 'port' ));
+      console.log( 'Node server is running on port ' + app.get( 'PORT' ));
       });
   });
 
