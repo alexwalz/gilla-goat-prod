@@ -2,10 +2,10 @@ const mongoose = require("mongoose");
 const db = require("../models");
 mongoose.Promise = global.Promise;
 
-// This file empties the Books collection and inserts the books below
+// This file empties the users collection and inserts the users below
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist",
+  process.env.MONGODB_URI || "mongodb://localhost/gillaGoatUsers",
   {
     useMongoClient: true
   }
@@ -57,9 +57,9 @@ const userSeed = [
   
 ];
 
-db.User
+db.user
   .remove({})
-  .then(() => db.User.collection.insertMany(userSeed))
+  .then(() => db.user.collection.insertMany(userSeed))
   .then(data => {
     console.log(data.insertedIds.length + " records inserted!");
     process.exit(0);

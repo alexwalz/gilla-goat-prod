@@ -1,31 +1,45 @@
-import React, { Component } from 'react'
-import { Sidebar, Segment, Button, Menu, Image, Icon, Header } from 'semantic-ui-react'
+import React, { Component } from 'react';
+import { Icon } from 'semantic-ui-react'
+import { Link } from "react-router-dom";
+import API from '../../utils/API'
 
-class SidebarLeftOverlay extends Component {
+const navbarContent = (props) => {
 
-  render() {
-    
-    return (
-      <div>
-        <Icon name='server' />
-          <Sidebar width='thin' icon='tasks' vertical inverted>
-            <Menu.Item name='home'>
-              <Icon name='home' />
-              Home
-            </Menu.Item>
-            <Menu.Item name='gamepad'>
-              <Icon name='gamepad' />
-              Games
-            </Menu.Item>
-            <Menu.Item name='camera'>
-              <Icon name='camera' />
-              Channels
-            </Menu.Item>
-          </Sidebar>
+        return    <div className="sidebar-content">
 
-      </div>
-    )
-  }
-}
+            {console.log(props)}
 
-export default SidebarLeftOverlay
+                <div className="sidebar-nav-links">
+ 
+                        <ul className="sidebar-links">
+                            <li className="sidebar-link">
+                                <Link to="/">
+                                    <Icon name='user' link className="sidebar-item" />
+                                    <span className="sidebar-link-text">Users</span>
+                                </Link>
+                            </li>
+                            <li className="sidebar-link">
+                                <Link to="/">
+                                    <Icon name='block layout' link className="sidebar-item" />
+                                    <span className="sidebar-link-text">Projects</span>
+                                </Link>
+                            </li>
+                            <li className="sidebar-link">
+                                <Link to="/">
+                                    <Icon name='tasks' link className="sidebar-item" />
+                                    <span className="sidebar-link-text">Tasks</span>
+                                </Link>
+                            </li>
+                            <li className="sidebar-link">
+                                <Link to="/">
+                                    <Icon name='travel' link className="sidebar-item" />
+                                    <span className="sidebar-link-text">Resources</span>
+                                </Link>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+};
+
+
+export default navbarContent;
