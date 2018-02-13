@@ -9,14 +9,5 @@ import { ConnectedRouter } from 'react-router-redux';
 import store, { history } from './tools/store';
 
 
-ReactDOM.render((
-  <Provider store={store}>
-      <ConnectedRouter history={history}>
-          <div id='app'>
-              <App />
-          </div>
-      </ConnectedRouter>
-  </Provider>
-), document.getElementById('root'))
-registerServiceWorker();
+ReactDOM.render(<App />, document.getElementById("root"));
 
